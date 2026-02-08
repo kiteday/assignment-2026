@@ -38,6 +38,11 @@ curl http://localhost:8000/health
 pytest -v
 ```
 
+## 동시성 테스트
+```bash
+PYTHONPATH=src python -m pytest -v tests/test_concurrency.py
+```
+
 ## 수동 테스트 요약
 - `/health` → 200 OK 확인
 - 강좌 목록/학생 목록 조회 정상
