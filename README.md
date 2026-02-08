@@ -10,7 +10,36 @@
 - 초기 데이터 자동 생성 (학과 10+, 교수 100+, 강좌 500+, 학생 10,000+)
 
 ## 환경
+### 필수
+- OS: macOS / Linux / Windows (테스트는 macOS 기준)
 - Python 3.9+
+- pip (Python 기본 패키지 관리자)
+
+### 권장
+- 가상환경: `venv` 또는 `venv2`
+- 쉘: bash/zsh (Windows는 PowerShell)
+
+### 실행에 필요한 환경 변수
+- `PYTHONPATH=src` (패키지 경로 인식용)
+
+### 데이터베이스
+- SQLite (로컬 파일 `course_enrollment.db`)
+- 동시성 안정화를 위해 WAL 모드 + busy_timeout 적용
+
+### 기본 포트
+- `8000`
+
+### 가상환경 활성화 예시
+```bash
+# macOS/Linux
+source venv/bin/activate
+
+# 프로젝트에 venv2가 있을 경우
+source venv2/bin/activate
+
+# Windows PowerShell
+.\venv\Scripts\Activate.ps1
+```
 
 ## 데이터 생성
 - 서버 시작 시 자동 생성 (1분 이내 목표)
